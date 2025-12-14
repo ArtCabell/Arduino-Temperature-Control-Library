@@ -18,7 +18,7 @@ A robust and feature-complete Arduino library for Maxim Temperature Integrated C
 |  device    |   power   |  notes  |
 |:-----------|:---------:|:--------|
 |  DS18B20   |   3-5 V   |  the reference
-|  DS18S20   |   3-5 V   |  9 bit only, ⚠️    Known issues with this series
+|  DS18S20   |   3-5 V   |  9 bit only
 |  DS1822    |   3-5 V   |
 |  DS1820    |   5 V     |  9 bit only
 |  MAX31820  |   3 V ⚠️    |
