@@ -558,6 +558,14 @@ int32_t DallasTemperature::calculateTemperature(const uint8_t* deviceAddress, ui
                        | neg;
     }
 
+    // detect fake data
+    if (deviceAddress[DSROM_FAMILY] == DS18B20MODEL && scratchPad[6] == 0x0C) {
+        if ((scratchPad[0] == 0x50 && scratchPad[1] == 0x05) || 
+            (scratchPad[0] == 0xFF && scratchPad[1] == 0x07)) {
+            return DEVICE_POWER_ON_RESET_RAW;
+        }
+    }
+
   /*
    DS1820 and DS18S20 have a 9-bit temperature register.
 

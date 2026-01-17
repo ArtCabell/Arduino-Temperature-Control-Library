@@ -47,6 +47,10 @@ unittest(test_error_code) {
     assertEqual(DEVICE_FAULT_SHORTVDD_C, -252);
     assertEqualFloat(DEVICE_FAULT_SHORTVDD_F, -421.6, 0.1);
     assertEqual(DEVICE_FAULT_SHORTVDD_RAW, -32256);
+
+    assertEqual(DEVICE_POWER_ON_RESET_C, -251);
+    assertEqualFloat(DEVICE_POWER_ON_RESET_F, -419.8, 0.1);
+    assertEqual(DEVICE_POWER_ON_RESET_RAW, -32128);
 }
 
 // Test basic initialization and functionality of the DallasTemperature library
